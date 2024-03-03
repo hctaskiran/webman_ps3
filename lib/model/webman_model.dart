@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webman_ps3/components/input_dialog.dart';
+import 'package:webman_ps3/constants/strings.dart';
 import 'package:webman_ps3/logic/browser_logics.dart';
 import 'package:webman_ps3/logic/cd_logics.dart';
 import 'package:webman_ps3/logic/fan_logics.dart';
@@ -80,8 +81,8 @@ class WebmanTile {
       // System
       WebmanModel(
         icon: Icons.close,
-        title: 'Shutdown',
-        subtitle: 'Shutdown device',
+        title: AppStrings().system.shutdown,
+        subtitle: AppStrings().system.subShutdown,
         onTap: (context) {
           String ipAddress = ipController.text.trim();
           SystemLogics().shutdown(context, ipAddress);
@@ -89,8 +90,8 @@ class WebmanTile {
       ),
       WebmanModel(
         icon: Icons.restart_alt_outlined,
-        title: 'Reboot',
-        subtitle: 'Reboot device in case of freeze or any other issue',
+        title: AppStrings().system.reboot,
+        subtitle: AppStrings().system.subReboot,
         onTap: (context) {
           String ipAddress = ipController.text.trim();
           SystemLogics().reboot(context, ipAddress);
@@ -99,8 +100,8 @@ class WebmanTile {
       // Game
       WebmanModel(
         icon: Icons.exit_to_app_outlined,
-        title: 'Exit',
-        subtitle: 'Quit game and return to XMB',
+        title: AppStrings().game.quit,
+        subtitle: AppStrings().game.subQuit,
         onTap: (context) {
           String ipAddress = ipController.text.trim();
           GameLogics().exit(context, ipAddress);
@@ -108,8 +109,8 @@ class WebmanTile {
       ),
       WebmanModel(
         icon: Icons.refresh_outlined,
-        title: 'Reload',
-        subtitle: 'Reload game in case of freeze or any other issue',
+        title: AppStrings().game.reload,
+        subtitle: AppStrings().game.subReload,
         onTap: (context) {
           String ipAddress = ipController.text.trim();
           SystemLogics().reboot(context, ipAddress);
@@ -117,8 +118,8 @@ class WebmanTile {
       ),
       WebmanModel(
         icon: Icons.document_scanner_outlined,
-        title: 'Rescan',
-        subtitle: 'Rescan games and refresh XMB list',
+        title: AppStrings().game.rescan,
+        subtitle: AppStrings().game.subRescan,
         onTap: (context) {
           String ipAddress = ipController.text.trim();
           GameLogics().rescan(context, ipAddress);
@@ -127,17 +128,17 @@ class WebmanTile {
       // CD
       WebmanModel(
         icon: Icons.eject_outlined,
-        title: 'Eject',
-        subtitle: 'Eject physical inserted disc from the console',
+        title: AppStrings().game.mount,
+        subtitle: AppStrings().game.subMount,
         onTap: (context) {
           String ipAddress = ipController.text.trim();
           CDLogics().eject(context, ipAddress);
         },
       ),
       WebmanModel(
-        icon: Icons.eject_outlined,
-        title: 'Mount',
-        subtitle: 'Search game by text & mount it',
+        icon: Icons.install_desktop_outlined,
+        title: AppStrings().game.mount,
+        subtitle: AppStrings().game.subMount,
         onTap: (context) {
           String ipAddress = ipController.text.trim();
           GameLogics().mountByText(context, ipAddress);
@@ -146,8 +147,8 @@ class WebmanTile {
       // Browser
       WebmanModel(
         icon: Icons.wifi_outlined,
-        title: 'Browser',
-        subtitle: 'Open web browser on the console and redirect to the specified URL',
+        title: AppStrings().misc.browser,
+        subtitle: AppStrings().misc.subBrowser,
         onTap: (context) {
           String ipAddress = ipController.text.trim();
           final TextEditingController urlController = TextEditingController();

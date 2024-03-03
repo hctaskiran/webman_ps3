@@ -32,4 +32,14 @@ class JoystickLogic {
       context.sneckBar('Tap failed', 2, Colors.red[700]);
     }
   }
+
+  Future<void> analogButtons(BuildContext context, String ipAddress, String button) async {
+    try {
+      final uri = Uri.http(ipAddress, '/pad.ps3?$button');
+      final response = await http.get(uri);
+      response.statusCode == 200 ? print('$button tapped') : print('$button failed');
+    } catch (e) {
+      context.sneckBar('Tap failed', 2, Colors.red[700]);
+    }
+  }
 }

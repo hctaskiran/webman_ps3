@@ -1,0 +1,46 @@
+{
+    "pages": {
+        "settings": {
+            "title": "Ayarlar",
+            "systemSettingsTitle": "Sistem Ayarları",
+            "language": "Dil",
+            "subLanguage": "Uygulama dilini değiştir",
+            "theme": "Tema",
+            "currentDark": "Güncel Tema: Koyu",
+            "currentLight": "Güncel Tema: Açık",
+            "applicationSettingsTitle": "Uygulama",
+            "troubleshoot": "Sorun Giderme",
+            "subTroubleshoot": "Uygulama ile ilgili sorunlara ve çözümlerine bak",
+            "aboutApp": "Uygulama Hakkında",
+            "subAboutApp": "Uygulama hakkında bilgi al",
+            "aboutAppDialog": "Versiyon: 1.0.0\n\nGeliştirici: hctaskiran / Sagredina\n\nUygulama, PS3 için geliştirilen webMAN MOD'un mobile uyarlanmış sürümüdür. Sistemi, oyunları ve birçok şeyi kontrol etmenize olanak sağlar."
+        },
+        "controller": {
+            "rotate": "Joystick kullanmak için cihazınızı döndürün"
+        }
+    },
+    "commands": {
+        "gameCommands": {
+            "reload": "Yeniden Yükle",
+            "subReload": "Oyunu yeniden yükle",
+            "quit": "Çıkış",
+            "subQuit": "Oyunu kapat ve XMB'ye dön",
+            "rescan": "Tara",
+            "subRescan": "Oyunları yeniden tara ve XMB'yi yenile",
+            "mount": "Tak (ISO)",
+            "subMount": "İsme göre oyunu ara ve tak",
+            "eject": "Çıkar",
+            "subEject": "Fiziken takılı diski çıkar"
+        },
+        "system": {
+            "shutdown": "Kapat",
+            "subShutdown": "Konsolu kapat",
+            "reboot": "Yeniden Başlat",
+            "subReboot": "Konsolu yeniden başlar"
+        },
+        "internet": {
+            "browser": "Tarayıcı",
+            "subBrowser": "Tarayıcıyı aç ve girilen siteye yönlendir"
+        }
+    }
+}

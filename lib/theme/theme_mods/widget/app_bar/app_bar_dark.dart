@@ -6,7 +6,6 @@ class DarkAppBar extends AppBarTheme {
       : super(
           scrolledUnderElevation: 0.0,
           iconTheme: IconThemeData(color: ThemeColors.dark.iconDark),
-          centerTitle: false,
           backgroundColor: ThemeColors.dark.appBarDark,
           titleTextStyle: TextStyle(color: ThemeColors.dark.textDark, fontSize: 30, fontWeight: FontWeight.bold),
         );

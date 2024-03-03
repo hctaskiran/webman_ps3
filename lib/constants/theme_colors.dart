@@ -9,7 +9,7 @@ class DarkThemeColors {
   DarkThemeColors();
   final Color scaffoldDark = const Color.fromRGBO(27, 38, 44, 1);
   final Color appBarDark = const Color.fromRGBO(27, 38, 44, 1);
-  final Color bottomNavigationDark = const Color.fromRGBO(27, 38, 44, 1);
+  // final Color bottomNavigationDark = const Color.fromRGBO(27, 38, 44, 1);
   final Color drawerDark = const Color.fromRGBO(27, 38, 44, 1);
   final Color textDark = Colors.white;
   final Color iconDark = Colors.white;
@@ -32,7 +32,7 @@ class LightThemeColors {
   LightThemeColors();
   final Color scaffoldLight = Colors.grey[300]!;
   final Color appBarLight = Colors.grey[300]!;
-  final Color bottomNavigationLight = Colors.grey[300]!;
+  // final Color bottomNavigationLight = Colors.grey[300]!;
   final Color drawerLight = Colors.grey[300]!;
   final Color textLight = Colors.grey[900]!;
   final Color iconLight = Colors.grey[900]!;

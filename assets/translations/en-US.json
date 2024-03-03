@@ -1,0 +1,46 @@
+{
+    "pages": {
+        "settings": {
+            "title": "Settings",
+            "systemSettingsTitle": "System Settings",
+            "language": "Language",
+            "subLanguage": "Choose application language",
+            "theme": "Theme",
+            "currentDark": "Current Theme: Dark",
+            "currentLight": "Current Theme: Light",
+            "applicationSettingsTitle": "Application",
+            "troubleshoot": "Troubleshoot",
+            "subTroubleshoot": "Check for common issues and solutions",
+            "aboutApp": "About App",
+            "subAboutApp": "Information about application and developer",
+            "aboutAppDialog": "Version: 1.0.0\n\nDeveloped by: hctaskiran / Sagredina\n\nThis app is a web-based frontend for the PS3 webMAN MOD. It allows you to manage your PS3 system, games, and more."
+        },
+        "controller": {
+            "rotate": "Rotate the device in order to use the controller"
+        }
+    },
+    "commands": {
+        "gameCommands": {
+            "reload": "Reload",
+            "subReload": "Reload game in case of freeze or any other issue",
+            "quit": "Quit",
+            "subQuit": "Quit game and return to XMB",
+            "rescan": "Rescan",
+            "subRescan": "Rescan games and refresh XMB list",
+            "mount": "Mount (ISO)",
+            "subMount": "Search for game by text and mount it",
+            "eject": "Eject",
+            "subEject": "Eject physically disc from the console"
+        },
+        "system": {
+            "shutdown": "Shutdown",
+            "subShutdown": "Shutdown the console",
+            "reboot": "Reboot",
+            "subReboot": "Reboot the console"
+        },
+        "internet": {
+            "browser": "Browser",
+            "subBrowser": "Open web browser and redirect to specified URL"
+        }
+    }
+}

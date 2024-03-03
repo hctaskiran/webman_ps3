@@ -15,7 +15,7 @@ class TextDark extends TextTheme {
           headlineSmall: TextStyle(color: ThemeColors.dark.textDark),
           titleSmall: TextStyle(color: ThemeColors.dark.textDark),
           titleMedium: TextStyle(color: ThemeColors.dark.textDark),
-          titleLarge: TextStyle(color: ThemeColors.dark.textDark),
+          titleLarge: TextStyle(color: ThemeColors.dark.textDark, fontSize: 24),
           labelLarge: TextStyle(color: ThemeColors.dark.textDark),
           labelMedium: TextStyle(color: ThemeColors.dark.textDark),
           labelSmall: TextStyle(color: ThemeColors.dark.textDark),

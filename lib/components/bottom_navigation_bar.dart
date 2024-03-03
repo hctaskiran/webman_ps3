@@ -14,11 +14,16 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: selectedIndex != 2
+          ? AppBar(
+              title: selectedIndex == 0
+                  ? const Text('Commands')
+                  : selectedIndex == 1
+                      ? const Text('System Info')
+                      : const Text('Settings'))
+          : null,
       body: NavigationPages.pages.elementAt(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
-        showUnselectedLabels: false,
-        selectedFontSize: 18,
         currentIndex: selectedIndex,
         onTap: (int index) {
           setState(() {

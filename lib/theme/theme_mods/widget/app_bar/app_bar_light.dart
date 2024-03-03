@@ -6,7 +6,6 @@ class LightAppBar extends AppBarTheme {
       : super(
           scrolledUnderElevation: 0.0,
           iconTheme: IconThemeData(color: ThemeColors.light.iconLight),
-          centerTitle: false,
           backgroundColor: ThemeColors.light.appBarLight,
           titleTextStyle: TextStyle(color: ThemeColors.light.textLight, fontSize: 30, fontWeight: FontWeight.bold),
         );

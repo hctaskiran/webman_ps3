@@ -8,6 +8,8 @@ import 'package:webman_ps3/theme/theme_mods/widget/divider/divider_dark.dart';
 import 'package:webman_ps3/theme/theme_mods/widget/divider/divider_light.dart';
 import 'package:webman_ps3/theme/theme_mods/widget/elevated_button/elevated_dark.dart';
 import 'package:webman_ps3/theme/theme_mods/widget/elevated_button/elevated_light.dart';
+import 'package:webman_ps3/theme/theme_mods/widget/expansion_tile/exp_dark.dart';
+import 'package:webman_ps3/theme/theme_mods/widget/expansion_tile/exp_light.dart';
 import 'package:webman_ps3/theme/theme_mods/widget/icon/icon_button_dark.dart';
 import 'package:webman_ps3/theme/theme_mods/widget/icon/icon_button_light.dart';
 import 'package:webman_ps3/theme/theme_mods/widget/icon/icon_dark.dart';
@@ -25,22 +27,25 @@ import 'package:webman_ps3/theme/theme_mods/widget/text_button/button_light.dart
 
 class CustomTheme {
   ThemeData darkTheme = ThemeData(
-    appBarTheme: DarkAppBar(),
-    bottomNavigationBarTheme: BNBDark(),
-    brightness: Brightness.dark,
-    dividerTheme: DividerDark(),
-    elevatedButtonTheme: ElevatedDark(),
-    iconButtonTheme: IconButtonDark(),
-    iconTheme: IconDark(),
-    inputDecorationTheme: InputDark(),
-    listTileTheme: TileDark(),
-    scaffoldBackgroundColor: ThemeColors.dark.scaffoldDark,
-    snackBarTheme: SnackDark(),
-    textButtonTheme: TextButtonDark(),
-    textTheme: TextDark(),
-  );
+      splashColor: Colors.transparent,
+      appBarTheme: DarkAppBar(),
+      dividerColor: Colors.transparent,
+      bottomNavigationBarTheme: BNBDark(),
+      brightness: Brightness.dark,
+      dividerTheme: DividerDark(),
+      elevatedButtonTheme: ElevatedDark(),
+      iconButtonTheme: IconButtonDark(),
+      iconTheme: IconDark(),
+      inputDecorationTheme: InputDark(),
+      listTileTheme: TileDark(),
+      scaffoldBackgroundColor: ThemeColors.dark.scaffoldDark,
+      snackBarTheme: SnackDark(),
+      textButtonTheme: TextButtonDark(),
+      textTheme: TextDark(),
+      expansionTileTheme: ExpansionDark());
 
   ThemeData lightTheme = ThemeData(
+    dividerColor: Colors.transparent,
     appBarTheme: LightAppBar(),
     bottomNavigationBarTheme: BNBLight(),
     brightness: Brightness.light,
@@ -54,5 +59,7 @@ class CustomTheme {
     snackBarTheme: SnackLight(),
     textButtonTheme: TextButtonLight(),
     textTheme: TextLight(),
+    expansionTileTheme: ExpansionLight(),
+    splashColor: Colors.transparent,
   );
 }
