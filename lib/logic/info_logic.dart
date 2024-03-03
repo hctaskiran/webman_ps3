@@ -6,11 +6,11 @@ import 'package:webman_ps3/extension/snack.dart';
 class InfoLogics {
   Future<void> hddInfo(BuildContext context, String ipAddress) async {
     try {
-      final uri = Uri.http(ipAddress, '/popup.ps3@info=0');
+      final uri = Uri.http(ipAddress, '/cpursx.ps3');
       final response = await http.get(uri);
       final html = dom.Document.html(response.body);
       final hdd = html
-          .querySelectorAll('font')
+          .querySelectorAll('<a href  </a>')
           .map(
             (e) => e.innerHtml.trim(),
           )

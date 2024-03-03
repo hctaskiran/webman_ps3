@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 import 'package:webman_ps3/constants/navigation_bar.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -26,12 +27,16 @@ class _BottomNavBarState extends State<BottomNavBar> {
         },
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Ionicons.code_slash),
+            label: 'Commands',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Console',
+            icon: Icon(Ionicons.information_circle_outline),
+            label: 'System Info',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Ionicons.game_controller_outline),
+            label: 'Controller',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings_outlined),

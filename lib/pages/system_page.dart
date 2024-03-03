@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ConsolePage extends StatelessWidget {
-  const ConsolePage({super.key});
+class SystemPage extends StatelessWidget {
+  const SystemPage({super.key});
 
   @override
   Widget build(BuildContext context) {

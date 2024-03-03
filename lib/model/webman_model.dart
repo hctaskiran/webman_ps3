@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:webman_ps3/components/input_dialog.dart';
 import 'package:webman_ps3/logic/browser_logics.dart';
 import 'package:webman_ps3/logic/cd_logics.dart';
+import 'package:webman_ps3/logic/fan_logics.dart';
 import 'package:webman_ps3/logic/game_logics.dart';
 import 'package:webman_ps3/logic/info_logic.dart';
 import 'package:webman_ps3/logic/system_logics.dart';
@@ -28,6 +29,54 @@ class WebmanTile {
 
   List<WebmanModel> get webman {
     return [
+      WebmanModel(
+        icon: Icons.voice_chat_outlined,
+        title: 'Test',
+        subtitle: 'Test?',
+        onTap: (context) {
+          String ipAddress = '192.168.88.9';
+          InfoLogics().hddInfo(context, ipAddress);
+        },
+      ),
+      WebmanModel(
+        icon: Icons.functions,
+        title: 'Fan Mode',
+        subtitle: 'Adjust the fan mode of the console',
+        onTap: (context) {
+          String ipAddress = '192.168.88.9';
+          showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  title: const Text('Choose Fan Mode'),
+                  content: SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.3,
+                    child: Column(
+                      children: [
+                        SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                        Column(
+                          children: [
+                            ElevatedButton(
+                              onPressed: () => FanLogics().sysconMode(context, ipAddress),
+                              child: const Text("Syscon"),
+                            ),
+                            ElevatedButton(
+                              onPressed: () => FanLogics().dynamicMode(context, ipAddress),
+                              child: const Text("Dynamic"),
+                            ),
+                            ElevatedButton(
+                              onPressed: () => FanLogics().autoMode(context, ipAddress),
+                              child: const Text("Auto"),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                );
+              });
+        },
+      ),
       // System
       WebmanModel(
         icon: Icons.close,
@@ -113,15 +162,6 @@ class WebmanTile {
         },
       ),
       // Miscllaneous
-      WebmanModel(
-        icon: Icons.voice_chat_outlined,
-        title: 'Test',
-        subtitle: 'Test?',
-        onTap: (context) {
-          String ipAddress = '192.168.88.9';
-          InfoLogics().hddInfo(context, ipAddress);
-        },
-      ),
     ];
   }
 }

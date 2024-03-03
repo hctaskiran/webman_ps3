@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:webman_ps3/constants/theme_colors.dart';
 import 'package:webman_ps3/theme/theme_mods/widget/app_bar/app_bar_dark.dart';
 import 'package:webman_ps3/theme/theme_mods/widget/app_bar/app_bar_light.dart';
+import 'package:webman_ps3/theme/theme_mods/widget/bottom_navigation_bar/bnb_dark.dart';
+import 'package:webman_ps3/theme/theme_mods/widget/bottom_navigation_bar/bnb_light.dart';
 import 'package:webman_ps3/theme/theme_mods/widget/divider/divider_dark.dart';
 import 'package:webman_ps3/theme/theme_mods/widget/divider/divider_light.dart';
 import 'package:webman_ps3/theme/theme_mods/widget/elevated_button/elevated_dark.dart';
@@ -24,6 +26,7 @@ import 'package:webman_ps3/theme/theme_mods/widget/text_button/button_light.dart
 class CustomTheme {
   ThemeData darkTheme = ThemeData(
     appBarTheme: DarkAppBar(),
+    bottomNavigationBarTheme: BNBDark(),
     brightness: Brightness.dark,
     dividerTheme: DividerDark(),
     elevatedButtonTheme: ElevatedDark(),
@@ -39,6 +42,7 @@ class CustomTheme {
 
   ThemeData lightTheme = ThemeData(
     appBarTheme: LightAppBar(),
+    bottomNavigationBarTheme: BNBLight(),
     brightness: Brightness.light,
     dividerTheme: DividerLight(),
     elevatedButtonTheme: ElevatedLight(),

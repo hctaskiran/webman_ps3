@@ -16,7 +16,7 @@ Future<dynamic> inputDialog(BuildContext context, String ipAddress, TextEditingC
       ],
       title: Text(title),
       content: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.1,
+        height: MediaQuery.of(context).size.height * 0.2,
         child: Column(
           children: [
             Text(subtitle),

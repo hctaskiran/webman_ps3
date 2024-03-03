@@ -7,6 +7,7 @@ import 'package:webman_ps3/theme/theme_mods/theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(MultiBlocProvider(providers: [
     BlocProvider<ThemeBloc>(create: (_) => ThemeBloc()..add(InitialThemeSetEvent())),
   ], child: const MyApp()));
