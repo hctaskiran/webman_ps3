@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:webman_ps3/theme/theme_mods/bloc/theme_event.dart';
-import 'package:webman_ps3/theme/theme_mods/bloc/theme_helper.dart';
+import 'package:webman_ps3/bloc/theme_event.dart';
+import 'package:webman_ps3/bloc/theme_helper.dart';
 
 class ThemeBloc extends Bloc<ThemeEvent, ThemeData> {
   ThemeBloc() : super(ThemeData.dark()) {

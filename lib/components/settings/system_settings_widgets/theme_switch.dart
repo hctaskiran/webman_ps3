@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:webman_ps3/constants/strings.dart';
-import 'package:webman_ps3/theme/theme_mods/bloc/theme_bloc.dart';
-import 'package:webman_ps3/theme/theme_mods/bloc/theme_event.dart';
+import 'package:webman_ps3/bloc/theme_bloc.dart';
+import 'package:webman_ps3/bloc/theme_event.dart';
 
 class ThemeSwitch extends StatelessWidget {
   const ThemeSwitch({super.key});

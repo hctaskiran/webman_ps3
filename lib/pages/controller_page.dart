@@ -15,9 +15,9 @@ class ControllerPage extends StatefulWidget {
 }
 
 class _ControllerPageState extends State<ControllerPage> {
+  final TextEditingController ipController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    const String ip = '192.168.88.9';
     return OrientationBuilder(
       builder: (context, orientation) {
         if (orientation == Orientation.portrait) {
@@ -28,9 +28,9 @@ class _ControllerPageState extends State<ControllerPage> {
               children: [
                 Row(
                   children: [
-                    DpadButtonLayout(ip: ip).onlyPadding(20, 0, 70, 0),
-                    const MidButtonLayout(ip: ip).onlyPadding(70, 0, 60, 0),
-                    ActionButtonLayout(ip: ip).onlyPadding(20, 0, 60, 0),
+                    DpadButtonLayout(ip: ipController.text).onlyPadding(20, 0, 70, 0),
+                    MidButtonLayout(ip: ipController.text).onlyPadding(70, 0, 60, 0),
+                    ActionButtonLayout(ip: ipController.text).onlyPadding(20, 0, 60, 0),
                   ],
                 ),
                 const SizedBox(height: 40),
@@ -40,7 +40,11 @@ class _ControllerPageState extends State<ControllerPage> {
                     AnalogL(),
                     AnalogR(),
                   ],
-                ).symetricPadding(20, 0)
+                ).symetricPadding(20, 0),
+                /* TextField(
+                  controller: ipController,
+                  decoration: const InputDecoration(hintText: 'Enter IP Address'),
+                ), */
               ],
             ),
           );

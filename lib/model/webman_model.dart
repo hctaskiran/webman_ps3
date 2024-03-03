@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:webman_ps3/components/input_dialog.dart';
 import 'package:webman_ps3/constants/strings.dart';
 import 'package:webman_ps3/logic/browser_logics.dart';
 import 'package:webman_ps3/logic/cd_logics.dart';
 import 'package:webman_ps3/logic/fan_logics.dart';
 import 'package:webman_ps3/logic/game_logics.dart';
-import 'package:webman_ps3/logic/info_logic.dart';
+import 'package:webman_ps3/logic/misc_logic.dart';
 import 'package:webman_ps3/logic/system_logics.dart';
 
 class WebmanModel {
@@ -23,28 +24,29 @@ class WebmanModel {
 }
 
 class WebmanTile {
-  WebmanTile({required this.ipController});
-
-  final TextEditingController ipController;
+  WebmanTile();
+  final TextEditingController ipController = TextEditingController();
   final TextEditingController urlController = TextEditingController();
 
   List<WebmanModel> get webman {
     return [
       WebmanModel(
-        icon: Icons.voice_chat_outlined,
+        icon: Icons.warning_amber_outlined,
         title: 'Test',
         subtitle: 'Test?',
-        onTap: (context) {
-          String ipAddress = '192.168.88.9';
-          InfoLogics().hddInfo(context, ipAddress);
+        onTap: (context) async {
+          final SharedPreferences prefs = await SharedPreferences.getInstance();
+          String ipAddress = prefs.getString('ipAddress') ?? '';
+          MiscLogic().prevIcon(context, ipAddress);
         },
       ),
       WebmanModel(
         icon: Icons.functions,
         title: 'Fan Mode',
         subtitle: 'Adjust the fan mode of the console',
-        onTap: (context) {
-          String ipAddress = '192.168.88.9';
+        onTap: (context) async {
+          final SharedPreferences prefs = await SharedPreferences.getInstance();
+          String ipAddress = prefs.getString('ipAddress') ?? '';
           showDialog(
               context: context,
               builder: (context) {
@@ -83,8 +85,9 @@ class WebmanTile {
         icon: Icons.close,
         title: AppStrings().system.shutdown,
         subtitle: AppStrings().system.subShutdown,
-        onTap: (context) {
-          String ipAddress = ipController.text.trim();
+        onTap: (context) async {
+          final SharedPreferences prefs = await SharedPreferences.getInstance();
+          String ipAddress = prefs.getString('ipAddress') ?? '';
           SystemLogics().shutdown(context, ipAddress);
         },
       ),
@@ -92,8 +95,9 @@ class WebmanTile {
         icon: Icons.restart_alt_outlined,
         title: AppStrings().system.reboot,
         subtitle: AppStrings().system.subReboot,
-        onTap: (context) {
-          String ipAddress = ipController.text.trim();
+        onTap: (context) async {
+          final SharedPreferences prefs = await SharedPreferences.getInstance();
+          String ipAddress = prefs.getString('ipAddress') ?? '';
           SystemLogics().reboot(context, ipAddress);
         },
       ),
@@ -102,8 +106,9 @@ class WebmanTile {
         icon: Icons.exit_to_app_outlined,
         title: AppStrings().game.quit,
         subtitle: AppStrings().game.subQuit,
-        onTap: (context) {
-          String ipAddress = ipController.text.trim();
+        onTap: (context) async {
+          final SharedPreferences prefs = await SharedPreferences.getInstance();
+          String ipAddress = prefs.getString('ipAddress') ?? '';
           GameLogics().exit(context, ipAddress);
         },
       ),
@@ -111,8 +116,9 @@ class WebmanTile {
         icon: Icons.refresh_outlined,
         title: AppStrings().game.reload,
         subtitle: AppStrings().game.subReload,
-        onTap: (context) {
-          String ipAddress = ipController.text.trim();
+        onTap: (context) async {
+          final SharedPreferences prefs = await SharedPreferences.getInstance();
+          String ipAddress = prefs.getString('ipAddress') ?? '';
           SystemLogics().reboot(context, ipAddress);
         },
       ),
@@ -120,8 +126,9 @@ class WebmanTile {
         icon: Icons.document_scanner_outlined,
         title: AppStrings().game.rescan,
         subtitle: AppStrings().game.subRescan,
-        onTap: (context) {
-          String ipAddress = ipController.text.trim();
+        onTap: (context) async {
+          final SharedPreferences prefs = await SharedPreferences.getInstance();
+          String ipAddress = prefs.getString('ipAddress') ?? '';
           GameLogics().rescan(context, ipAddress);
         },
       ),
@@ -130,8 +137,9 @@ class WebmanTile {
         icon: Icons.eject_outlined,
         title: AppStrings().game.mount,
         subtitle: AppStrings().game.subMount,
-        onTap: (context) {
-          String ipAddress = ipController.text.trim();
+        onTap: (context) async {
+          final SharedPreferences prefs = await SharedPreferences.getInstance();
+          String ipAddress = prefs.getString('ipAddress') ?? '';
           CDLogics().eject(context, ipAddress);
         },
       ),
@@ -139,9 +147,22 @@ class WebmanTile {
         icon: Icons.install_desktop_outlined,
         title: AppStrings().game.mount,
         subtitle: AppStrings().game.subMount,
-        onTap: (context) {
-          String ipAddress = ipController.text.trim();
+        onTap: (context) async {
+          final TextEditingController mountController = TextEditingController();
+          final SharedPreferences prefs = await SharedPreferences.getInstance();
+          String ipAddress = prefs.getString('ipAddress') ?? '';
           GameLogics().mountByText(context, ipAddress);
+          showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                  title: const Text('Mount Game'),
+                  content: TextFormField(
+                    controller: mountController,
+                    onFieldSubmitted: (value) {
+                      GameLogics().mountByText(context, ipAddress);
+                      Navigator.pop(context);
+                    },
+                  )));
         },
       ),
       // Browser
@@ -149,8 +170,9 @@ class WebmanTile {
         icon: Icons.wifi_outlined,
         title: AppStrings().misc.browser,
         subtitle: AppStrings().misc.subBrowser,
-        onTap: (context) {
-          String ipAddress = ipController.text.trim();
+        onTap: (context) async {
+          final SharedPreferences prefs = await SharedPreferences.getInstance();
+          String ipAddress = prefs.getString('ipAddress') ?? '';
           final TextEditingController urlController = TextEditingController();
           inputDialog(
               context,

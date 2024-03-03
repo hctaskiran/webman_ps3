@@ -2,9 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:webman_ps3/extension/snack.dart';
 
 class GameLogics {
+  late SharedPreferences prefs;
+  late String? ipAddress = prefs.getString('ipAddress');
   Future<void> exit(BuildContext context, String ipAddress) async {
     try {
       final uri = Uri.http(ipAddress, '/xmb.ps3\$exit');
@@ -37,21 +40,11 @@ class GameLogics {
 
   Future<void> mountByText(BuildContext context, String ipAddress) async {
     try {
-      final uri = Uri.http(ipAddress, '/mount.ps3?san%20andreas');
+      final uri = Uri.http(ipAddress, '/mount.ps3?');
       final response = await http.get(uri);
       response.statusCode == 200 ? print('Rescan done!') : print('Rescan failed');
     } catch (e) {
       context.sneckBar('Rescan failed', 2, Colors.red[700]);
-    }
-  }
-
-  Future<void> searchAndPlay(BuildContext context, String ipAddress) async {
-    try {
-      final uri = Uri.http(ipAddress, '/play.ps3?grand%20theft%20auto%20san%20andreas');
-      final response = await http.get(uri);
-      response.statusCode == 200 ? print('Game launched!') : print('Launch failed');
-    } catch (e) {
-      context.sneckBar('Launch failed', 2, Colors.red[700]);
     }
   }
 }
