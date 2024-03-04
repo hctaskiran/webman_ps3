@@ -7,10 +7,7 @@ import 'package:webman_ps3/logic/joystick_logic.dart';
 class DpadButtonLayout extends StatelessWidget {
   DpadButtonLayout({
     super.key,
-    required this.ip,
   });
-
-  final String ip;
 
   final List _dPadIcons = [
     const Icon(Ionicons.arrow_up_circle),
@@ -23,12 +20,10 @@ class DpadButtonLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        DPAD(onPressed: () => JoystickLogic().dPad(context, ip, 'up'), icon: _dPadIcons[0]).onlyPadding(0, 0, 70, 0),
-        DPAD(onPressed: () => JoystickLogic().dPad(context, ip, 'down'), icon: _dPadIcons[1])
-            .onlyPadding(100, 0, 70, 0),
-        DPAD(onPressed: () => JoystickLogic().dPad(context, ip, 'left'), icon: _dPadIcons[2]).onlyPadding(50, 0, 10, 0),
-        DPAD(onPressed: () => JoystickLogic().dPad(context, ip, 'right'), icon: _dPadIcons[3])
-            .onlyPadding(50, 0, 130, 0),
+        DPAD(onPressed: () => JoystickLogic().dPad(context, 'up'), icon: _dPadIcons[0]).onlyPadding(0, 0, 70, 0),
+        DPAD(onPressed: () => JoystickLogic().dPad(context, 'down'), icon: _dPadIcons[1]).onlyPadding(100, 0, 70, 0),
+        DPAD(onPressed: () => JoystickLogic().dPad(context, 'left'), icon: _dPadIcons[2]).onlyPadding(50, 0, 10, 0),
+        DPAD(onPressed: () => JoystickLogic().dPad(context, 'right'), icon: _dPadIcons[3]).onlyPadding(50, 0, 130, 0),
       ],
     );
   }

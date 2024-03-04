@@ -7,10 +7,8 @@ import 'package:webman_ps3/logic/joystick_logic.dart';
 class ActionButtonLayout extends StatelessWidget {
   ActionButtonLayout({
     super.key,
-    required this.ip,
   });
 
-  final String ip;
 
   final List _actionButtons = [
     const Icon(Ionicons.triangle_outline),
@@ -23,13 +21,13 @@ class ActionButtonLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        ActionButtons(onPressed: () => JoystickLogic().action(context, ip, 'triangle'), icon: _actionButtons[0])
+        ActionButtons(onPressed: () => JoystickLogic().action(context , 'triangle'), icon: _actionButtons[0])
             .onlyPadding(0, 0, 70, 0),
-        ActionButtons(onPressed: () => JoystickLogic().action(context, ip, 'cross'), icon: _actionButtons[1])
+        ActionButtons(onPressed: () => JoystickLogic().action(context, 'cross'), icon: _actionButtons[1])
             .onlyPadding(100, 0, 70, 0),
-        ActionButtons(onPressed: () => JoystickLogic().action(context, ip, 'square'), icon: _actionButtons[2])
+        ActionButtons(onPressed: () => JoystickLogic().action(context, 'square'), icon: _actionButtons[2])
             .onlyPadding(50, 0, 10, 0),
-        ActionButtons(onPressed: () => JoystickLogic().action(context, ip, 'circle'), icon: _actionButtons[3])
+        ActionButtons(onPressed: () => JoystickLogic().action(context, 'circle'), icon: _actionButtons[3])
             .onlyPadding(50, 0, 130, 0),
       ],
     );

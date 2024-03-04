@@ -19,7 +19,7 @@ class _AnalogRState extends State<AnalogR> {
       onPanUpdate: (details) {
         setState(() {
           position += details.delta;
-          AnalogLogic().analogGesture(context, 'analogR', ipController.text.trim(), position, knobRadius);
+          AnalogLogic().analogGesture(context, 'analogR', position, knobRadius);
         });
       },
       onPanEnd: (details) {

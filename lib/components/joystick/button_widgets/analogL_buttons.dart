@@ -11,7 +11,6 @@ class AnalogL extends StatefulWidget {
 class _AnalogLState extends State<AnalogL> {
   Offset position = const Offset(0, 0);
   double knobRadius = 20;
-  final TextEditingController ipController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +18,7 @@ class _AnalogLState extends State<AnalogL> {
       onPanUpdate: (details) {
         setState(() {
           position += details.delta;
-          AnalogLogic().analogGesture(context, 'analogL', ipController.text.trim(), position, knobRadius);
+          AnalogLogic().analogGesture(context, 'analogL', position, knobRadius);
         });
       },
       onPanEnd: (details) {
