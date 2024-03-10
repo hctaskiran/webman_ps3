@@ -7,6 +7,7 @@ class AppStrings {
   final system = SystemCommands();
   final controller = Controller();
   final misc = Misc();
+  final logic = Logics();
 }
 
 class Settings {
@@ -52,4 +53,26 @@ class SystemCommands {
 class Misc {
   final String browser = LocaleKeys.commands_internet_browser.tr();
   final String subBrowser = LocaleKeys.commands_internet_subBrowser.tr();
+}
+
+class Logics {
+  final String redirectDone = LocaleKeys.browserLogic_done.tr();
+  final String redirectFailed = LocaleKeys.browserLogic_failed.tr();
+  final String cdEjectDone = LocaleKeys.cdLogic_done.tr();
+  final String cdEjectFailed = LocaleKeys.cdLogic_failed.tr();
+  final String fanSyscon = LocaleKeys.fanLogic_syscon.tr();
+  final String fanAuto = LocaleKeys.fanLogic_manual.tr();
+  final String fanDynamic = LocaleKeys.fanLogic_dynamic.tr();
+  final String fanFailed = LocaleKeys.fanLogic_failed.tr();
+  final String gameReloadDone = LocaleKeys.gameLogic_reloadDone.tr();
+  final String gameReloadFailed = LocaleKeys.gameLogic_reloadFailed.tr();
+  final String gameExit = LocaleKeys.gameLogic_exit.tr();
+  final String gameExitFailed = LocaleKeys.gameLogic_exitFailed.tr();
+  final String gameRescanDone = LocaleKeys.gameLogic_rescan.tr();
+  final String gameRescanFailed = LocaleKeys.gameLogic_rescanFailed.tr();
+  final String joystickFailed = LocaleKeys.joystickLogic_failed.tr();
+  final String rebootDone = LocaleKeys.systemLogic_rebootDone.tr();
+  final String rebootFailed = LocaleKeys.systemLogic_rebootFailed.tr();
+  final String shutdownDone = LocaleKeys.systemLogic_shutdown.tr();
+  final String shutdownFailed = LocaleKeys.systemLogic_shutdownFailed.tr();
 }

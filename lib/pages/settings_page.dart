@@ -41,70 +41,74 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Text('IP Settings', style: Theme.of(context).textTheme.titleLarge)
-              .onlyPadding(0, 0, 20, 0)
-              .alignment(Alignment.centerLeft),
-          SettingsWidget(
-            children: [
-              ListTile(
-                splashColor: Colors.transparent,
-                hoverColor: Colors.transparent,
-                leading: const Icon(Ionicons.wifi),
-                title: const Text('IP Address'),
-                subtitle: const Text('Configure the IP address of the PS3'),
-                onTap: () => showDialog(
-                  context: context,
-                  builder: (context) => AlertDialog(
-                    title: const Text('IP Address'),
-                    content: TextFormField(
-                      controller: ipController,
-                      decoration: const InputDecoration(hintText: 'Enter IP Address'),
+      appBar: AppBar(title: Text(AppStrings().settings.title)),
+      extendBody: true,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Text('IP Settings', style: Theme.of(context).textTheme.titleLarge)
+                .onlyPadding(0, 0, 20, 0)
+                .alignment(Alignment.centerLeft),
+            SettingsWidget(
+              children: [
+                ListTile(
+                  splashColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  leading: const Icon(Ionicons.wifi),
+                  title: const Text('IP Address'),
+                  subtitle: const Text('Configure the IP address of the PS3'),
+                  onTap: () => showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: const Text('IP Address'),
+                      content: TextFormField(
+                        controller: ipController,
+                        decoration: const InputDecoration(hintText: 'Enter IP Address'),
+                      ),
+                      actions: [
+                        TextButton(
+                          onPressed: () => Navigator.pop(context),
+                          child: const Text('Cancel'),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            _saveIPAddress(ipController.text);
+                            Navigator.pop(context);
+                          },
+                          child: const Text('Save'),
+                        ),
+                      ],
                     ),
-                    actions: [
-                      TextButton(
-                        onPressed: () => Navigator.pop(context),
-                        child: const Text('Cancel'),
-                      ),
-                      TextButton(
-                        onPressed: () {
-                          _saveIPAddress(ipController.text); // Save IP address
-                          Navigator.pop(context);
-                        },
-                        child: const Text('Save'),
-                      ),
-                    ],
                   ),
+                )
+              ],
+            ),
+            Text(
+              AppStrings().settings.systemSettings,
+              style: Theme.of(context).textTheme.titleLarge,
+            ).onlyPadding(0, 0, 20, 0).alignment(Alignment.centerLeft),
+            const Column(
+              children: [
+                SettingsWidget(
+                  children: [
+                    ThemeSwitch(),
+                    LanguageWidget(),
+                  ],
                 ),
-              )
-            ],
-          ),
-          Text(
-            AppStrings().settings.systemSettings,
-            style: Theme.of(context).textTheme.titleLarge,
-          ).onlyPadding(0, 0, 20, 0).alignment(Alignment.centerLeft),
-          const Column(
-            children: [
-              SettingsWidget(
-                children: [
-                  ThemeSwitch(),
-                  LanguageWidget(),
-                ],
-              ),
-            ],
-          ),
-          Text(
-            AppStrings().settings.appSettings,
-            style: Theme.of(context).textTheme.titleLarge,
-          ).onlyPadding(0, 0, 20, 0).alignment(Alignment.centerLeft),
-          const SettingsWidget(
-            children: [
-              FAQ(),
-              AboutApp(),
-            ],
-          )
-        ],
+              ],
+            ),
+            Text(
+              AppStrings().settings.appSettings,
+              style: Theme.of(context).textTheme.titleLarge,
+            ).onlyPadding(0, 0, 20, 0).alignment(Alignment.centerLeft),
+            const SettingsWidget(
+              children: [
+                FAQ(),
+                AboutApp(),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

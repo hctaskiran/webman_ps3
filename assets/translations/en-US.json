@@ -42,5 +42,36 @@
             "browser": "Browser",
             "subBrowser": "Open web browser and redirect to specified URL"
         }
+    },
+    "browserLogic": {
+        "done": "Redirect completed.",
+        "failed": "Failed to redirect, try again or check for 'troubleshooting'."
+    },
+    "cdLogic": {
+        "done": "CD ejected.",
+        "failed": "Eject failed, try again or check for 'troubleshooting'."
+    },
+    "fanLogic": {
+        "syscon": "Fan mode set to SYSCON.",
+        "dynamic": "Fan mode set to DYNAMIC.",
+        "manual": "Fan mode set to MANUAL.",
+        "failed": "Couldn't set the fan mode, try again or check for 'troubleshooting'."
+    },
+    "gameLogic": {
+        "reloadDone": "Reload done.",
+        "reloadFailed": "Reload failed, try again or check for 'troubleshooting'.",
+        "exit": "Exit done.",
+        "exitFailed": "Exit failed, try again or check for 'troubleshooting'.",
+        "rescan": "Rescan done.",
+        "rescanFailed": "Rescan failed, try again or check for 'troubleshooting'."
+    },
+    "joystickLogic": {
+        "failed": "Tap failed, try again or check for 'troubleshooting'."
+    },
+    "systemLogic": {
+        "rebootDone": "Reboot done.",
+        "rebootFailed": "Reboot failed, try again or check for 'troubleshooting'.",
+        "shutdown": "Shutdown done.",
+        "shutdownFailed": "Shutdown failed, try again or check for 'troubleshooting'."
     }
 }

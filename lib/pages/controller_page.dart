@@ -17,10 +17,11 @@ class ControllerPage extends StatefulWidget {
 class _ControllerPageState extends State<ControllerPage> {
   @override
   Widget build(BuildContext context) {
+    // final double horizontal = MediaQuery.of(context).size.width * 0.30;
     return OrientationBuilder(
       builder: (context, orientation) {
         if (orientation == Orientation.portrait) {
-          return Center(child: Text(AppStrings().controller.rotate));
+          return Center(child: Text(AppStrings().controller.rotate)).allPadding(30);
         } else {
           return Scaffold(
             body: Column(

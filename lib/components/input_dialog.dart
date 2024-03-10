@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Future<dynamic> inputDialog(BuildContext context, String ipAddress, TextEditingController urlController,
+Future<dynamic> inputDialog(BuildContext context, TextEditingController urlController,
     Function()? onPressed, String title, String subtitle, String hintText) {
   return showDialog(
     context: context,

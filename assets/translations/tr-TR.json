@@ -42,5 +42,36 @@
             "browser": "Tarayıcı",
             "subBrowser": "Tarayıcıyı aç ve girilen siteye yönlendir"
         }
+    },
+    "browserLogic": {
+        "done": "Yönlendirme tamamlandı.",
+        "failed": "Yönlendirme yapılamadı, tekrar deneyin veya 'sorun giderme'ye bakın."
+    },
+    "cdLogic": {
+        "done": "CD çıkarıldı.",
+        "failed": "CD çıkarılamadı, tekrar deneyin veya 'sorun giderme'ye bakın."
+    },
+    "fanLogic": {
+        "syscon": "Fan SYSCON moduna ayarlandı.",
+        "dynamic": "Fan DYNAMIC moduna ayarlandı.",
+        "manual": "Fan MANUAL moduna ayarlandı.",
+        "failed": "Fan modu değiştirilemedi, tekrar deneyin veya 'sorun giderme'ye bakın."
+    },
+    "gameLogic": {
+        "reloadDone": "Oyun yeniden başlatıldı.",
+        "reloadFailed": "Oyun yeniden başlatılamadı, tekrar deneyin veya 'sorun giderme'ye bakın.",
+        "exit": "Oyundan çıkıldı.",
+        "exitFailed": "Oyundan çıkılamadı, tekrar deneyin veya 'sorun giderme'ye bakın.",
+        "rescan": "Tarama tamamlandı.",
+        "rescanFailed": "Tarama tamamlanamadı, tekrar deneyin veya 'sorun giderme'ye bakın."
+    },
+    "joystickLogic": {
+        "failed": "Joystick kullanılamadı, tekrar deneyin veya 'sorun giderme'ye bakın."
+    },
+    "systemLogic": {
+        "rebootDone": "Cihaz yeniden başlatıldı.",
+        "rebootFailed": "Cihaz yeniden başlatılamadı, tekrar deneyin veya 'sorun giderme'ye bakın.",
+        "shutdown": "Cihaz kapatıldı.",
+        "shutdownFailed": "Cihaz kapatılamadı, tekrar deneyin veya 'sorun giderme'ye bakın."
     }
 }

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 extension SnackExt on BuildContext {
-  void sneckBar(String message, int duration, Color? backgroundColor) {
+  void sneckBar(String message, Color? backgroundColor) {
     ScaffoldMessenger.of(this).showSnackBar(
       SnackBar(
         content: Text(message),
-        duration: Duration(seconds: duration),
+        duration: const Duration(seconds: 2),
         backgroundColor: backgroundColor,
       ),
     );

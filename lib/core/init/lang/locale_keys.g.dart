@@ -38,5 +38,30 @@ abstract class  LocaleKeys {
   static const commands_internet_subBrowser = 'commands.internet.subBrowser';
   static const commands_internet = 'commands.internet';
   static const commands = 'commands';
+  static const browserLogic_done = 'browserLogic.done';
+  static const browserLogic_failed = 'browserLogic.failed';
+  static const browserLogic = 'browserLogic';
+  static const cdLogic_done = 'cdLogic.done';
+  static const cdLogic_failed = 'cdLogic.failed';
+  static const cdLogic = 'cdLogic';
+  static const fanLogic_syscon = 'fanLogic.syscon';
+  static const fanLogic_dynamic = 'fanLogic.dynamic';
+  static const fanLogic_manual = 'fanLogic.manual';
+  static const fanLogic_failed = 'fanLogic.failed';
+  static const fanLogic = 'fanLogic';
+  static const gameLogic_reloadDone = 'gameLogic.reloadDone';
+  static const gameLogic_reloadFailed = 'gameLogic.reloadFailed';
+  static const gameLogic_exit = 'gameLogic.exit';
+  static const gameLogic_exitFailed = 'gameLogic.exitFailed';
+  static const gameLogic_rescan = 'gameLogic.rescan';
+  static const gameLogic_rescanFailed = 'gameLogic.rescanFailed';
+  static const gameLogic = 'gameLogic';
+  static const joystickLogic_failed = 'joystickLogic.failed';
+  static const joystickLogic = 'joystickLogic';
+  static const systemLogic_rebootDone = 'systemLogic.rebootDone';
+  static const systemLogic_rebootFailed = 'systemLogic.rebootFailed';
+  static const systemLogic_shutdown = 'systemLogic.shutdown';
+  static const systemLogic_shutdownFailed = 'systemLogic.shutdownFailed';
+  static const systemLogic = 'systemLogic';
 
 }

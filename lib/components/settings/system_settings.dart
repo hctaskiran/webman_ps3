@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:webman_ps3/extension/padding.dart';
 import 'package:webman_ps3/bloc/theme_bloc.dart';
+import 'package:webman_ps3/extension/padding.dart';
 
 class SettingsWidget extends StatelessWidget {
   const SettingsWidget({

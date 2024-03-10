@@ -19,7 +19,7 @@ class InfoLogics {
         print(hdd);
       }
     } catch (e) {
-      context.sneckBar('Error!', 2, Colors.red[700]);
+      context.sneckBar('Error!', Colors.red[700]);
     }
   }
 }
