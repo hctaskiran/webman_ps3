@@ -1,6 +1,10 @@
 // DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
 
 abstract class  LocaleKeys {
+  static const pages_commandsHeader = 'pages.commandsHeader';
+  static const pages_settingsHeader = 'pages.settingsHeader';
+  static const pages_systemInfoHeader = 'pages.systemInfoHeader';
+  static const pages_controllerHeader = 'pages.controllerHeader';
   static const pages_settings_title = 'pages.settings.title';
   static const pages_settings_systemSettingsTitle = 'pages.settings.systemSettingsTitle';
   static const pages_settings_language = 'pages.settings.language';
@@ -33,6 +37,8 @@ abstract class  LocaleKeys {
   static const commands_system_subShutdown = 'commands.system.subShutdown';
   static const commands_system_reboot = 'commands.system.reboot';
   static const commands_system_subReboot = 'commands.system.subReboot';
+  static const commands_system_fanSettings = 'commands.system.fanSettings';
+  static const commands_system_subFanSettings = 'commands.system.subFanSettings';
   static const commands_system = 'commands.system';
   static const commands_internet_browser = 'commands.internet.browser';
   static const commands_internet_subBrowser = 'commands.internet.subBrowser';

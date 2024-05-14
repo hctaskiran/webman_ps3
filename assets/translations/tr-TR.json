@@ -1,5 +1,9 @@
 {
     "pages": {
+        "commandsHeader" : "Komutlar",
+        "settingsHeader": "Ayarlar",
+        "systemInfoHeader": "Sistem Bilgisi",
+        "controllerHeader": "Kontrolcü",
         "settings": {
             "title": "Ayarlar",
             "systemSettingsTitle": "Sistem Ayarları",
@@ -36,7 +40,9 @@
             "shutdown": "Kapat",
             "subShutdown": "Konsolu kapat",
             "reboot": "Yeniden Başlat",
-            "subReboot": "Konsolu yeniden başlar"
+            "subReboot": "Konsolu yeniden başlat",
+            "fanSettings": "Fan Ayarları",
+            "subFanSettings": "Konsolun fan hızını ayarlayın"
         },
         "internet": {
             "browser": "Tarayıcı",

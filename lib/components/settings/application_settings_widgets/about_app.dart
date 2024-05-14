@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:webman_ps3/constants/strings.dart';
+import 'package:webman_ps3/core/enum/translations_enum.dart';
 
 class AboutApp extends StatelessWidget {
   const AboutApp({super.key});
@@ -8,8 +8,8 @@ class AboutApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: const Icon(Icons.info_outline),
-      title: Text(AppStrings().settings.aboutApp, style: const TextStyle(fontSize: 18)),
-      subtitle: Text(AppStrings().settings.subAboutApp, style: const TextStyle(fontSize: 12)),
+      title: Text(Translations().ABOUT_APP, style: const TextStyle(fontSize: 18)),
+      subtitle: Text(Translations().ABOUT_APP_DESC, style: const TextStyle(fontSize: 12)),
       onTap: () => showDialog(
         context: context,
         builder: (context) {
@@ -17,7 +17,7 @@ class AboutApp extends StatelessWidget {
               title: const Text('Webman PS3 Mobile'),
               content: RichText(
                   text: TextSpan(
-                text: AppStrings().settings.aboutAppDialog,
+                text: Translations().ABOUT_APP_CONTENT,
               )));
         },
       ),

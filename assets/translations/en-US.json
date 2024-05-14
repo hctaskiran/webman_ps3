@@ -1,5 +1,9 @@
 {
     "pages": {
+        "commandsHeader" : "Commands",
+        "settingsHeader": "Settings",
+        "systemInfoHeader": "System Info",
+        "controllerHeader": "Controller",
         "settings": {
             "title": "Settings",
             "systemSettingsTitle": "System Settings",
@@ -33,10 +37,13 @@
             "subEject": "Eject physically disc from the console"
         },
         "system": {
+
             "shutdown": "Shutdown",
             "subShutdown": "Shutdown the console",
             "reboot": "Reboot",
-            "subReboot": "Reboot the console"
+            "subReboot": "Reboot the console",
+            "fanSettings": "Fan Settings",
+            "subFanSettings": "Adjust the fan speed of the console"
         },
         "internet": {
             "browser": "Browser",

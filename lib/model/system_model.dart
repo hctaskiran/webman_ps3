@@ -1,7 +1,7 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:flutter/material.dart';
-import 'package:webman_ps3/constants/strings.dart';
+import 'package:webman_ps3/core/enum/translations_enum.dart';
 import 'package:webman_ps3/logic/system_logics.dart';
 
 class SystemModel {
@@ -27,16 +27,16 @@ class SystemTile {
     return [
       SystemModel(
         icon: Icons.close,
-        title: AppStrings().system.shutdown,
-        subtitle: AppStrings().system.subShutdown,
+        title: Translations().SHUTDOWN,
+        subtitle: Translations().SHUTDOWN_DESC,
         onTap: (context) async {
           SystemLogics().shutdown(context);
         },
       ),
       SystemModel(
         icon: Icons.restart_alt_outlined,
-        title: AppStrings().system.reboot,
-        subtitle: AppStrings().system.subReboot,
+        title: Translations().REBOOT,
+        subtitle: Translations().REBOOT_DESC,
         onTap: (context) async {
           SystemLogics().reboot(context);
         },

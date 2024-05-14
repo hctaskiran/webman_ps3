@@ -8,8 +8,15 @@ class AppStrings {
   final controller = Controller();
   final misc = Misc();
   final logic = Logics();
+  final navbar = NavBar();
 }
 
+class NavBar {
+  final String commands = LocaleKeys.pages_commandsHeader.tr();
+  final String info = LocaleKeys.pages_systemInfoHeader.tr(); 
+  final String controller = LocaleKeys.pages_controllerHeader.tr();
+  final String settings = LocaleKeys.pages_settingsHeader.tr();
+}
 class Settings {
   final String title = LocaleKeys.pages_settings_title.tr();
   final String systemSettings = LocaleKeys.pages_settings_systemSettingsTitle.tr();
@@ -19,8 +26,8 @@ class Settings {
   final String language = LocaleKeys.pages_settings_language.tr();
   final String subLanguage = LocaleKeys.pages_settings_subLanguage.tr();
   final String appSettings = LocaleKeys.pages_settings_applicationSettingsTitle.tr();
-  final String faq = LocaleKeys.pages_settings_troubleshoot.tr();
-  final String subFaq = LocaleKeys.pages_settings_subTroubleshoot.tr();
+  final String troubleshoot = LocaleKeys.pages_settings_troubleshoot.tr();
+  final String subTroubleshoot = LocaleKeys.pages_settings_subTroubleshoot.tr();
   final String aboutApp = LocaleKeys.pages_settings_aboutApp.tr();
   final String subAboutApp = LocaleKeys.pages_settings_subAboutApp.tr();
   final String aboutAppDialog = LocaleKeys.pages_settings_aboutAppDialog.tr();
@@ -48,6 +55,8 @@ class SystemCommands {
   final String subReboot = LocaleKeys.commands_system_subReboot.tr();
   final String shutdown = LocaleKeys.commands_system_shutdown.tr();
   final String subShutdown = LocaleKeys.commands_system_subShutdown.tr();
+  final String fanSettings = LocaleKeys.commands_system_fanSettings.tr();
+  final String subFanSettings = LocaleKeys.commands_system_subFanSettings.tr();
 }
 
 class Misc {

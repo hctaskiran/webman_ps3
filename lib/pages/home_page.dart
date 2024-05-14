@@ -26,9 +26,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           bottom: TabBar(
             controller: tabController,
             tabs: const [
-              Tab(
-                text: 'SYSTEM',
-              ),
+              Tab(text: 'SYSTEM'),
               Tab(text: 'GAME'),
               Tab(text: 'MISC'),
             ],

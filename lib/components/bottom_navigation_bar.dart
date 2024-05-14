@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:webman_ps3/constants/navigation_bar.dart';
+import 'package:webman_ps3/core/enum/translations_enum.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -37,11 +38,11 @@ class _BottomNavBarState extends State<BottomNavBar> with TickerProviderStateMix
   }
 
   List<BottomNavigationBarItem> get _bnb {
-    return const [
-      BottomNavigationBarItem(icon: Icon(Ionicons.code_slash), label: 'Commands'),
-      BottomNavigationBarItem(icon: Icon(Ionicons.information_circle_outline), label: 'System Info'),
-      BottomNavigationBarItem(icon: Icon(Ionicons.game_controller_outline), label: 'Controller'),
-      BottomNavigationBarItem(icon: Icon(Icons.settings_outlined), label: 'Settings'),
+    return  [
+      BottomNavigationBarItem(icon: const Icon(Ionicons.code_slash), label: Translations().COMMANDS_NAVBAR),
+      BottomNavigationBarItem(icon: const Icon(Ionicons.information_circle_outline), label: Translations().SYSTEM_INFO_NAVBAR),
+      BottomNavigationBarItem(icon: const Icon(Ionicons.game_controller_outline), label: Translations().CONTROLLER_NAVBAR),
+      BottomNavigationBarItem(icon: const Icon(Icons.settings_outlined), label: Translations().SETTINGS_NAVBAR),
     ];
   }
 }

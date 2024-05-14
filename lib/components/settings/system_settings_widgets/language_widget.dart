@@ -3,8 +3,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:webman_ps3/components/bottom_navigation_bar.dart';
-import 'package:webman_ps3/constants/strings.dart';
 import 'package:webman_ps3/core/enum/language_enum.dart';
+import 'package:webman_ps3/core/enum/translations_enum.dart';
 import 'package:webman_ps3/theme/anim/fade_anim.dart';
 
 class LanguageWidget extends StatelessWidget {
@@ -18,8 +18,8 @@ class LanguageWidget extends StatelessWidget {
     return ExpansionTile(
       enableFeedback: false,
       leading: const Icon(Icons.language),
-      title: Text(AppStrings().settings.language, style: const TextStyle(fontSize: 18)),
-      subtitle: Text(AppStrings().settings.subLanguage, style: const TextStyle(fontSize: 12)),
+      title: Text(Translations().LANGUAGE, style: const TextStyle(fontSize: 18)),
+      subtitle: Text(Translations().LANGUAGE_DESC, style: const TextStyle(fontSize: 12)),
       children: [
         ListTile(
           title: Row(

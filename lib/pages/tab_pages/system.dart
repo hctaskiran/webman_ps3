@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:webman_ps3/core/enum/translations_enum.dart';
 import 'package:webman_ps3/logic/fan_logics.dart';
 import 'package:webman_ps3/model/system_model.dart';
 
@@ -13,6 +14,7 @@ class SystemCommands extends StatefulWidget {
 class _SystemCommandsState extends State<SystemCommands> {
   final TextEditingController ipController = TextEditingController();
   final TextEditingController urlController = TextEditingController();
+  // Translations locale = Translations(AppStrings());
   final List<SystemModel> system = SystemTile().system;
 
   @override
@@ -40,8 +42,14 @@ class _SystemCommandsState extends State<SystemCommands> {
               ),
               ExpansionTile(
                 leading: const FaIcon(FontAwesomeIcons.fan),
-                title: const Text('Fan Settings', style: TextStyle(fontSize: 18)),
-                subtitle: const Text('Adjust the fan speed of the console', style: TextStyle(fontSize: 12)),
+                title: Text(
+                  Translations().FAN_SETTINGS_TITLE,
+                  style: const TextStyle(fontSize: 18),
+                ),
+                subtitle: Text(
+                  Translations().FAN_SETTINGS_DESC,
+                  style: const TextStyle(fontSize: 12),
+                ),
                 children: [
                   ListTile(
                     onTap: () => FanLogics().sysconMode(context),

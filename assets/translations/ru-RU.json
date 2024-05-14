@@ -1,5 +1,9 @@
 {
     "pages": {
+        "commandsHeader" : "Команды",
+        "settingsHeader": "Настройки",
+        "systemInfoHeader": "Системные Информации",
+        "controllerHeader": "Контроллер",
         "settings": {
             "title": "Настройки",
             "systemSettingsTitle": "Системные настройки",
@@ -36,7 +40,9 @@
             "shutdown": "Выключить",
             "subShutdown": "Выключить консоль",
             "reboot": "Перезагрузить",
-            "subReboot": "Перезагрузить консоль"
+            "subReboot": "Перезагрузить консоль",
+            "fanSettings": "Настройки Вентилятора",
+            "subFanSettings": "Установить режим вентилятора"
         },
         "internet": {
             "browser": "Браузер",
