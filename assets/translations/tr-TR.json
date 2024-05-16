@@ -23,6 +23,11 @@
             "rotate": "Joystick kullanmak için cihazınızı döndürün"
         }
     },
+    "tabBars": {
+        "system": "SİSTEM",
+        "game": "OYUN",
+        "misc": "DİĞER"
+    },
     "commands": {
         "gameCommands": {
             "reload": "Yeniden Yükle",

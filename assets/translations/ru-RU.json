@@ -1,6 +1,6 @@
 {
     "pages": {
-        "commandsHeader" : "Команды",
+        "commandsHeader": "Команды",
         "settingsHeader": "Настройки",
         "systemInfoHeader": "Системные Информации",
         "controllerHeader": "Контроллер",
@@ -22,6 +22,11 @@
         "controller": {
             "rotate": "Поверните устройство чтобы пользоваться контроллером"
         }
+    },
+    "tabBars": {
+        "system": "СИСТЕМА",
+        "game": "ИГРА",
+        "misc": "ДРУГИЕ"
     },
     "commands": {
         "gameCommands": {

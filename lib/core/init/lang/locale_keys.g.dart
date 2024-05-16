@@ -22,6 +22,10 @@ abstract class  LocaleKeys {
   static const pages_controller_rotate = 'pages.controller.rotate';
   static const pages_controller = 'pages.controller';
   static const pages = 'pages';
+  static const tabBars_system = 'tabBars.system';
+  static const tabBars_game = 'tabBars.game';
+  static const tabBars_misc = 'tabBars.misc';
+  static const tabBars = 'tabBars';
   static const commands_gameCommands_reload = 'commands.gameCommands.reload';
   static const commands_gameCommands_subReload = 'commands.gameCommands.subReload';
   static const commands_gameCommands_quit = 'commands.gameCommands.quit';

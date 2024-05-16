@@ -7,11 +7,22 @@ import 'package:webman_ps3/core/enum/language_enum.dart';
 import 'package:webman_ps3/core/enum/translations_enum.dart';
 import 'package:webman_ps3/theme/anim/fade_anim.dart';
 
-class LanguageWidget extends StatelessWidget {
+class LanguageWidget extends StatefulWidget {
   const LanguageWidget({
     super.key,
   });
 
+  @override
+  State<LanguageWidget> createState() => _LanguageWidgetState();
+}
+
+Future<dynamic> _changeLanguage(Languages save, Languages toLocale, BuildContext context, Widget page) async {
+  await save.saveLocale();
+  context.setLocale(toLocale.toLocale());
+  Navigator.pushReplacement(context, FadeAnim(page: page));
+}
+
+class _LanguageWidgetState extends State<LanguageWidget> {
   @override
   Widget build(BuildContext context) {
     String currentLanguage = context.locale.toLanguageTag();
@@ -32,9 +43,12 @@ class LanguageWidget extends StatelessWidget {
             ],
           ),
           onTap: () async {
-            await Languages.turkish.saveLocale();
-            context.setLocale(Languages.turkish.toLocale());
-            Navigator.pushReplacement(context, FadeAnim(page: const BottomNavBar()));
+            _changeLanguage(
+              Languages.turkish,
+              Languages.turkish,
+              context,
+              const BottomNavBar(),
+            );
           },
         ),
         ListTile(

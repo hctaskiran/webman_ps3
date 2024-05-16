@@ -9,6 +9,13 @@ class AppStrings {
   final misc = Misc();
   final logic = Logics();
   final navbar = NavBar();
+  final tabbar = TabBars();
+}
+
+class TabBars {
+  final String system = LocaleKeys.tabBars_system.tr();
+  final String game = LocaleKeys.tabBars_game.tr();
+  final String misc = LocaleKeys.tabBars_misc.tr();
 }
 
 class NavBar {

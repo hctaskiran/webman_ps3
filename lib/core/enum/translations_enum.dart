@@ -23,4 +23,7 @@ class Translations{
   final String THEME = AppStrings().settings.theme;
   final String THEME_LIGHT = AppStrings().settings.currentLight;
   final String THEME_DARK = AppStrings().settings.currentDark;
+  final String SYSTEM_TAB = AppStrings().tabbar.system;
+  final String GAME_TAB = AppStrings().tabbar.game;
+  final String MISC_TAB = AppStrings().tabbar.misc;
 }

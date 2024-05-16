@@ -37,7 +37,6 @@
             "subEject": "Eject physically disc from the console"
         },
         "system": {
-
             "shutdown": "Shutdown",
             "subShutdown": "Shutdown the console",
             "reboot": "Reboot",
@@ -49,6 +48,11 @@
             "browser": "Browser",
             "subBrowser": "Open web browser and redirect to specified URL"
         }
+    },
+    "tabBars": {
+        "system": "SYSTEM",
+        "game": "GAME",
+        "misc": "MISCELLANEOUS"
     },
     "browserLogic": {
         "done": "Redirect completed.",
