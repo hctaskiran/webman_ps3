@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:webman_ps3/pages/tab_pages/game.dart';
-import 'package:webman_ps3/pages/tab_pages/system.dart';
+import 'package:webman_ps3/constants/navigation_bar.dart';
+import 'package:webman_ps3/pages/tab_pages/game_commands.dart';
+import 'package:webman_ps3/pages/tab_pages/misc_commands.dart';
+import 'package:webman_ps3/pages/tab_pages/system_commands.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,6 +13,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   TabController? tabController;
+  final bars = NavigationPages().tabBars;
 
   @override
   void initState() {
@@ -25,10 +28,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         appBar: AppBar(
           bottom: TabBar(
             controller: tabController,
-            tabs: const [
-              Tab(text: 'SYSTEM'),
-              Tab(text: 'GAME'),
-              Tab(text: 'MISC'),
+            tabs:  [
+              bars[0],
+              bars[1],
+              bars[2],
             ],
           ),
         ),
@@ -37,7 +40,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           children: const [
             SystemCommands(),
             GameCommands(),
-            SystemCommands(),
+            MiscCommands(),
           ],
         ));
   }

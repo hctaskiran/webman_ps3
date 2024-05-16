@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:webman_ps3/components/joystick/button_layout/action_layout.dart';
 import 'package:webman_ps3/components/joystick/button_layout/dpad_layout.dart';
 import 'package:webman_ps3/components/joystick/button_layout/mid_layout.dart';
-import 'package:webman_ps3/components/joystick/button_widgets/analogL_buttons.dart';
-import 'package:webman_ps3/components/joystick/button_widgets/analogR_buttons.dart';
+import 'package:webman_ps3/components/joystick/button_widgets/left_analog_buttons.dart';
+import 'package:webman_ps3/components/joystick/button_widgets/right_analog_buttons.dart';
 import 'package:webman_ps3/constants/strings.dart';
 import 'package:webman_ps3/extension/padding.dart';
 

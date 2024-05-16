@@ -17,6 +17,7 @@ class SettingsPage extends StatefulWidget {
   State<SettingsPage> createState() => _SettingsPageState();
 }
 
+
 class _SettingsPageState extends State<SettingsPage> {
   final TextEditingController ipController = TextEditingController();
   late SharedPreferences _prefs;
@@ -46,6 +47,7 @@ class _SettingsPageState extends State<SettingsPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            // TODO(hctaskiran): Localization
             Text('IP Settings', style: Theme.of(context).textTheme.titleLarge)
                 .onlyPadding(0, 0, 20, 0)
                 .alignment(Alignment.centerLeft),
@@ -55,19 +57,24 @@ class _SettingsPageState extends State<SettingsPage> {
                   splashColor: Colors.transparent,
                   hoverColor: Colors.transparent,
                   leading: const Icon(Ionicons.wifi),
+                  // TODO(hctaskiran): Localization
                   title: const Text('IP Address'),
+                  // TODO(hctaskiran): Localization
                   subtitle: const Text('Configure the IP address of the PS3'),
                   onTap: () => showDialog(
                     context: context,
                     builder: (context) => AlertDialog(
+                      // TODO(hctaskiran): Localization
                       title: const Text('IP Address'),
                       content: TextFormField(
                         controller: ipController,
+                        // TODO(hctaskiran): Localization
                         decoration: const InputDecoration(hintText: 'Enter IP Address'),
                       ),
                       actions: [
                         TextButton(
                           onPressed: () => Navigator.pop(context),
+                          // TODO(hctaskiran): Localization
                           child: const Text('Cancel'),
                         ),
                         TextButton(
@@ -75,6 +82,7 @@ class _SettingsPageState extends State<SettingsPage> {
                             _saveIPAddress(ipController.text);
                             Navigator.pop(context);
                           },
+                          // TODO(hctaskiran): Localization
                           child: const Text('Save'),
                         ),
                       ],

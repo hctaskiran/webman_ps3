@@ -13,8 +13,6 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> with TickerProviderStateMixin {
   int selectedIndex = 0;
 
-  
-
   @override
   Widget build(BuildContext context) {
     return OrientationBuilder(
@@ -38,11 +36,23 @@ class _BottomNavBarState extends State<BottomNavBar> with TickerProviderStateMix
   }
 
   List<BottomNavigationBarItem> get _bnb {
-    return  [
-      BottomNavigationBarItem(icon: const Icon(Ionicons.code_slash), label: Translations().COMMANDS_NAVBAR),
-      BottomNavigationBarItem(icon: const Icon(Ionicons.information_circle_outline), label: Translations().SYSTEM_INFO_NAVBAR),
-      BottomNavigationBarItem(icon: const Icon(Ionicons.game_controller_outline), label: Translations().CONTROLLER_NAVBAR),
-      BottomNavigationBarItem(icon: const Icon(Icons.settings_outlined), label: Translations().SETTINGS_NAVBAR),
+    return [
+      BottomNavigationBarItem(
+        icon: const Icon(Ionicons.code_slash),
+        label: Translations().COMMANDS_NAVBAR,
+      ),
+      BottomNavigationBarItem(
+        icon: const Icon(Ionicons.information_circle_outline),
+        label: Translations().SYSTEM_INFO_NAVBAR,
+      ),
+      BottomNavigationBarItem(
+        icon: const Icon(Ionicons.game_controller_outline),
+        label: Translations().CONTROLLER_NAVBAR,
+      ),
+      BottomNavigationBarItem(
+        icon: const Icon(Icons.settings_outlined),
+        label: Translations().SETTINGS_NAVBAR,
+      ),
     ];
   }
 }

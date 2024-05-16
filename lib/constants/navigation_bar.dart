@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webman_ps3/core/enum/translations_enum.dart';
 import 'package:webman_ps3/pages/controller_page.dart';
 import 'package:webman_ps3/pages/home_page.dart';
 import 'package:webman_ps3/pages/settings_page.dart';
@@ -12,18 +13,9 @@ class NavigationPages {
     const SettingsPage(),
   ];
 
-  static final chips = [
-    ActionChip(
-      label: const Text('SYSTEM'),
-      onPressed: () {},
-    ),
-    ActionChip(
-      label: const Text('GAME'),
-      onPressed: () {},
-    ),
-    ActionChip(
-      label: const Text('MISC'),
-      onPressed: () {},
-    ),
+  final tabBars = [
+    Tab(text: Translations().SYSTEM_TAB),
+    Tab(text: Translations().GAME_TAB),
+    Tab(text: Translations().MISC_TAB),
   ];
 }
